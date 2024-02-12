@@ -1,0 +1,19 @@
+﻿@model  DevFolio.Models.TblSkill
+@{
+    ViewBag.Title = "UpdateSkill";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2> Yetenek Güncelleme </h2>
+
+<form method="post">
+    <input  type="hidden" name="SkillID" value="@Model.SkillID"/>
+    <label>Yetenek Adı</label>
+    <input type="text" class="form-control" name="SkillTitle" value="@Model.SkillTitle" />
+    <br />
+    <label>Yetenek Değeri</label>
+    <input type="text" class="form-control" name="SkillValue" value="@Model.SkillValue"/>
+    <br />
+    <button class="btn btn-info"> Yeteneği Güncelle</button>
+</form>
+

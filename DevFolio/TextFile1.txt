@@ -2,3 +2,27 @@
 ııs->windows tabanlı yazılımların yayın yapıldığı sunucu
 web projesi->kendi bilgisayarınızda bir asp uygulamamsını alıyorsunuz localhost kendi sunucunuzda bu projeyi değiştirmeye devam ediyorsunuz bunu alıp
 herkesin görebileceği erişebileciği sunucuya taşıyorsunuz.
+(EntityFramwork-Dapper)-ORM
+ORM->Object Relation Mapping
+Mvc -Model=veri tabanı nesne öğelerini tutar
+Tablolar-class
+Column-Property-get;set;
+* ilişkisel veri tabanı ile uygulamamız arasında bir köprü görevi gören, ilişkileri ve nesneleri yönetmek için kullanılan bir tekniktir
+SQL deki değerleri alıyor c# tarafnda MVC Core artık neyle çalışıyorsanız oraya yansıtıyor.
+değişken-veriyi bellekte tutar
+property-değişkenden farkı get set var
+
+//class oluştururken newlemek->referans oluşturmak
+//instance oluşturma-> bir sınıfın bir örneğini veya bir nesnesini temsil eder.
+DbDevFolioEntities db = new DbDevFolioEntities();
+bir apartmanda daireler düşünün  dairelerin içindeki fayans renkleri farklı olabilir. buda özellik
+apartmanın içindeki daireler nesnemiz dairelerin içindeki özellikler bizim özelliğimiz
+sınıf nesne özellik
+class object property
+
+
+
+
+
+
+
