@@ -1,0 +1,4 @@
+﻿localhost->bilgisayarımızdan yayın yaptığımız ııs alt yapısı
+ııs->windows tabanlı yazılımların yayın yapıldığı sunucu
+web projesi->kendi bilgisayarınızda bir asp uygulamamsını alıyorsunuz localhost kendi sunucunuzda bu projeyi değiştirmeye devam ediyorsunuz bunu alıp
+herkesin görebileceği erişebileciği sunucuya taşıyorsunuz.
