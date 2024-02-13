@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevFolio.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,19 +9,29 @@ namespace DevFolio.Controllers
 {
     public class ContactController : Controller
     {
-        // GET: Contact
+        DbDevFolioEntities db = new DbDevFolioEntities();
         public ActionResult Index()
         {
             return View();
         }
+        [HttpGet]
         public ActionResult SendMessage()
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult SendMessage(TblContact p)
+        {
+            var value = db.TblContact.Add(p);
+            db.SaveChanges();
+
+            return RedirectToAction("MessageList");
+        }
 
         public ActionResult MessageList()
         {
-            return View();
+            var values = db.TblContact.ToList();
+            return View(values);
         }
     }
 }

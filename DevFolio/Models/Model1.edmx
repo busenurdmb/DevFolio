@@ -32,8 +32,6 @@
           <Property Name="PhoneNumber" Type="varchar" MaxLength="20" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'DbDevFolio.dbo.TblAdmin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TblAdmin">
           <Key>
             <PropertyRef Name="AdminID" />
@@ -53,7 +51,7 @@ warning 6002: The table/view 'DbDevFolio.dbo.TblAdmin' does not have a primary k
           <Key>
             <PropertyRef Name="ContactID" />
           </Key>
-          <Property Name="ContactID" Type="int" Nullable="false" />
+          <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NameSurname" Type="varchar" MaxLength="50" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="Subject" Type="varchar" MaxLength="50" />
@@ -142,6 +140,7 @@ warning 6002: The table/view 'DbDevFolio.dbo.TblAdmin' does not have a primary k
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblAddress" EntityType="Self.TblAddress" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCategory" EntityType="Self.TblCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblFeature" EntityType="Self.TblFeature" Schema="dbo" store:Type="Tables" />
@@ -151,13 +150,6 @@ warning 6002: The table/view 'DbDevFolio.dbo.TblAdmin' does not have a primary k
           <EntitySet Name="TblSkill" EntityType="Self.TblSkill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblSocialMedia" EntityType="Self.TblSocialMedia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTestimonial" EntityType="Self.TblTestimonial" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TblAdmin].[AdminID] AS [AdminID], 
-    [TblAdmin].[Username] AS [Username], 
-    [TblAdmin].[Password] AS [Password]
-    FROM [dbo].[TblAdmin] AS [TblAdmin]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_TblProject_TblCategory" Association="Self.FK_TblProject_TblCategory">
             <End Role="TblCategory" EntitySet="TblCategory" />
             <End Role="TblProject" EntitySet="TblProject" />
@@ -195,6 +187,14 @@ warning 6002: The table/view 'DbDevFolio.dbo.TblAdmin' does not have a primary k
           <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="AdminID" />
+          </Key>
+          <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="TblCategory">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -207,7 +207,7 @@ warning 6002: The table/view 'DbDevFolio.dbo.TblAdmin' does not have a primary k
           <Key>
             <PropertyRef Name="ContactID" />
           </Key>
-          <Property Name="ContactID" Type="Int32" Nullable="false" />
+          <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -281,14 +281,6 @@ warning 6002: The table/view 'DbDevFolio.dbo.TblAdmin' does not have a primary k
           <Property Name="ImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Status" Type="Boolean" />
         </EntityType>
-        <EntityType Name="TblAdmin">
-          <Key>
-            <PropertyRef Name="AdminID" />
-          </Key>
-          <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
         <Association Name="FK_TblProject_TblCategory">
           <End Role="TblCategory" Type="Self.TblCategory" Multiplicity="0..1" />
           <End Role="TblProject" Type="Self.TblProject" Multiplicity="*" />
@@ -305,6 +297,7 @@ warning 6002: The table/view 'DbDevFolio.dbo.TblAdmin' does not have a primary k
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" />
           <EntitySet Name="TblAddress" EntityType="Self.TblAddress" />
+          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" />
           <EntitySet Name="TblCategory" EntityType="Self.TblCategory" />
           <EntitySet Name="TblContact" EntityType="Self.TblContact" />
           <EntitySet Name="TblFeature" EntityType="Self.TblFeature" />
@@ -314,7 +307,6 @@ warning 6002: The table/view 'DbDevFolio.dbo.TblAdmin' does not have a primary k
           <EntitySet Name="TblSkill" EntityType="Self.TblSkill" />
           <EntitySet Name="TblSocialMedia" EntityType="Self.TblSocialMedia" />
           <EntitySet Name="TblTestimonial" EntityType="Self.TblTestimonial" />
-          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" />
           <AssociationSet Name="FK_TblProject_TblCategory" Association="Self.FK_TblProject_TblCategory">
             <End Role="TblCategory" EntitySet="TblCategory" />
             <End Role="TblProject" EntitySet="TblProject" />
@@ -353,6 +345,15 @@ warning 6002: The table/view 'DbDevFolio.dbo.TblAdmin' does not have a primary k
                 <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblAdmin">
+            <EntityTypeMapping TypeName="DbDevFolioModel.TblAdmin">
+              <MappingFragment StoreEntitySet="TblAdmin">
+                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -446,15 +447,6 @@ warning 6002: The table/view 'DbDevFolio.dbo.TblAdmin' does not have a primary k
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblAdmin">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblAdmin">
-              <MappingFragment StoreEntitySet="TblAdmin">
-                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

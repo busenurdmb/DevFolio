@@ -16,5 +16,48 @@ namespace DevFolio.Controllers
             var values = db.TblSocialMedia.ToList();
             return View(values);
         }
+        [HttpGet]
+        public ActionResult CreateSocialMedia()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateSocialMedia(TblSocialMedia p)
+        {
+            db.TblSocialMedia.Add(p);
+            db.SaveChanges();
+            return RedirectToAction("SocialMediaList");
+        }
+
+        public ActionResult DeleteSocialMedia(int id)
+        {
+            var value = db.TblSocialMedia.Find(id);
+            db.TblSocialMedia.Remove(value);
+            db.SaveChanges();
+            return RedirectToAction("SocialMediaList");
+
+
+        }
+
+        [HttpGet]
+        public ActionResult UpdateSocialMedia(int id)
+        {
+
+            var value = db.TblSocialMedia.Find(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateSocialMedia(TblSocialMedia p)
+        {
+            var value = db.TblSocialMedia.Find(p.SocialMediaID);
+            value.PlatformName = p.PlatformName;
+            value.RedirectUrl = p.RedirectUrl;
+            value.Status= p.Status;
+            value.İconUrl= p.İconUrl;
+            db.SaveChanges();
+            return RedirectToAction("SocialMediaList");
+        }
     }
 }

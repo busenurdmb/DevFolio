@@ -28,6 +28,7 @@ namespace DevFolio.Models
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TblAbout> TblAbout { get; set; }
         public virtual DbSet<TblAddress> TblAddress { get; set; }
+        public virtual DbSet<TblAdmin> TblAdmin { get; set; }
         public virtual DbSet<TblCategory> TblCategory { get; set; }
         public virtual DbSet<TblContact> TblContact { get; set; }
         public virtual DbSet<TblFeature> TblFeature { get; set; }
@@ -37,6 +38,5 @@ namespace DevFolio.Models
         public virtual DbSet<TblSkill> TblSkill { get; set; }
         public virtual DbSet<TblSocialMedia> TblSocialMedia { get; set; }
         public virtual DbSet<TblTestimonial> TblTestimonial { get; set; }
-        public virtual DbSet<TblAdmin> TblAdmin { get; set; }
     }
 }

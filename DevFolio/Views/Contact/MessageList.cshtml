@@ -1,6 +1,7 @@
-﻿
+﻿@model List<DevFolio.Models.TblContact>
 @{
-    Layout = null;
+    ViewBag.Title = "MessageList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -13,18 +14,17 @@
             <th>Konu</th>
             <th>mesajı aç</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>murat sağlam</td>
-            <td>teşekkür</td>
-            <td> <a href="#" class="btn btn-warning">mesajı aç</a> </td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>kemal kibar</td>
-            <td>şikayet</td>
-            <td> <a href="#" class="btn btn-warning">mesajı aç</a> </td>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@item.ContactID</td>
+        <td>@item.NameSurname</td>
+        <td>@item.Subject</td>
+        
+        <td> <a href="#" class="btn btn-warning">mesajı aç</a> </td>
+    </tr>
+        }
 
-        </tr>
+        
     </table>
 </div>

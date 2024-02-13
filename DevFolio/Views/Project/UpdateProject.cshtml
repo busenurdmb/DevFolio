@@ -1,0 +1,21 @@
+﻿﻿@model DevFolio.Models.TblProject
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Proje Oluşturma Sayfası</h2>
+<input type="hidden" name="ProjectID" value="@Model.ProjectID" />
+<label> Proje Başlığı</label>
+<input type="text" class="form-control" name="Title" />
+<br />
+<label> Proje Kategorisi</label>
+@Html.DropDownListFor(m => m.TblCategory.CategoryID, (List<SelectListItem>)@ViewBag.Category, new { @class = "form-control"  )
+
+
+<br />
+<label> Proje Açıklaması</label>
+<textarea class=" form-control" rows="5" value="@Model.CoverImageUrl"></textarea>
+<br />
+<button class="btn btn-info"> Projeyi Kaydet</button>
+

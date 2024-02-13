@@ -1,10 +1,10 @@
-﻿
+﻿@model List<DevFolio.Models.TblProject>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>projeler sayfası</h2>
+<h2>Projeler sayfası</h2>
 <table class="table table-bordered">
     <tr>
         <th> #   </th>
@@ -12,23 +12,16 @@
         <th> Kategori   </th>
         <th> Githup'da Aç   </th>
     </tr>
+    @foreach (var item in Model)
+    {
     <tr>
-        <td>1</td>
-        <td>Crm Yazılımı</td>
-        <td>Crm YazılımıMasaüstü uygulaması</td>
+        <td>@item.ProjectID</td>
+        <td>@item.Title</td>
+        <td>@item.TblCategory.CategoryName</td>
         <td><a href="#">GithuB'da Aç</a></td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>ToDoList App</td>
-        <td>Mobil Uygulama</td>
-        <td><a href="#">GithuB'da Aç</a></td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Büyük Veri Analizi</td>
-        <td>Makine Öğrenmesi</td>
-        <td><a href="#">GithuB'da Aç</a></td>
-    </tr>
+    }
+    
+  
 </table>
 

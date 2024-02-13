@@ -1,0 +1,38 @@
+﻿@model List<DevFolio.Models.TblAddress>
+@{
+    ViewBag.Title = "AddressList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<h2>Profil Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Açıklama</th>
+        <th>Konum</th>
+        <th>Email</th>
+        <th>Telefon</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AdressID</td>
+            <td>@item.Description</td>
+            <td>@item.Location</td>
+            <td>@item.Email</td>
+            <td>@item.PhoneNumber</td>
+            <td><a href="/Address/DeleteAddress/@item.AdressID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Address/UpdateAddress/@item.AdressID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+
+    }
+</table>
+<td><a href="/Address/CreateAddress" class="btn btn-info">Ekle</a></td>
+
+
+
+

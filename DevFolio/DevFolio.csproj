@@ -211,8 +211,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -382,14 +382,31 @@
     <Content Include="Views\Skill\SkillList.cshtml" />
     <Content Include="Views\Skill\CreateSkill.cshtml" />
     <Content Include="Views\Skill\UpdateSkill.cshtml" />
+    <Content Include="Views\About\AboutList.cshtml" />
+    <Content Include="Views\About\CreateAbout.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\Profile\ProfileList.cshtml" />
+    <Content Include="Views\Profile\CreateProfile.cshtml" />
+    <Content Include="Views\Profile\UpdateProfile.cshtml" />
+    <Content Include="Views\Address\AddressList.cshtml" />
+    <Content Include="Views\Address\CreateAddress.cshtml" />
+    <Content Include="Views\Address\UpdateAddress.cshtml" />
+    <Content Include="Views\Testimonial\TestimonialList.cshtml" />
+    <Content Include="Views\Testimonial\CreateTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
+    <Content Include="Views\Admin\AdminList.cshtml" />
+    <Content Include="Views\Admin\CreateAdmin.cshtml" />
+    <Content Include="Views\Admin\UpdateAdmin.cshtml" />
+    <Content Include="Views\Project\UpdateProject.cshtml" />
+    <Content Include="Views\Category\CategoryList.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Category\CreateCategory.cshtml" />
+    <Content Include="Views\Service\ServiceList.cshtml" />
+    <Content Include="Views\Service\CreateService.cshtml" />
+    <Content Include="Views\Service\UpdateService.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\About\" />
-    <Folder Include="Views\Address\" />
-    <Folder Include="Views\Admin\" />
-    <Folder Include="Views\Profile\" />
-    <Folder Include="Views\Testimonial\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

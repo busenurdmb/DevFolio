@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevFolio.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,54 @@ namespace DevFolio.Controllers
 {
     public class AboutController : Controller
     {
-        // GET: About
-        public ActionResult Index()
+        DbDevFolioEntities db = new DbDevFolioEntities();
+        public ActionResult AboutList()
+        {
+            var values = db.TblAbout.ToList();
+            return View(values);
+        }
+
+        [HttpGet]
+        public ActionResult CreateAbout()
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult CreateAbout(TblAbout p)
+        {
+            db.TblAbout.Add(p);
+            db.SaveChanges();
+            return RedirectToAction("AboutList");
+        }
+
+        public ActionResult DeleteAbout(int id)
+        {
+            var value = db.TblAbout.Find(id);
+            db.TblAbout.Remove(value);
+            db.SaveChanges();
+            return RedirectToAction("AboutList");
+
+
+        }
+
+        [HttpGet]
+        public ActionResult UpdateAbout(int id)
+        {
+
+            var value = db.TblAbout.Find(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateAbout(TblAbout p)
+        {
+            var value = db.TblAbout.Find(p.AboutID);
+            value.Description = p.Description;
+            db.SaveChanges();
+            return RedirectToAction("AboutList");
+        }
+
+
     }
 }

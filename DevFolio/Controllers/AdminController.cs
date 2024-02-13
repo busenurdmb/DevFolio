@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevFolio.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,53 @@ namespace DevFolio.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
-        public ActionResult Index()
+        DbDevFolioEntities db = new DbDevFolioEntities();
+        public ActionResult AdminList()
+        {
+            var values = db.TblAdmin.ToList();
+            return View(values);
+        }
+
+        [HttpGet]
+        public ActionResult CreateAdmin()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateAdmin(TblAdmin p)
+        {
+            db.TblAdmin.Add(p);
+            db.SaveChanges();
+            return View();
+        }
+
+        public ActionResult DeleteAdmin(int id)
+        {
+            var value = db.TblAdmin.Find(id);
+            db.TblAdmin.Remove(value);
+            db.SaveChanges();
+            return RedirectToAction("AdminList");
+
+
+        }
+
+        [HttpGet]
+        public ActionResult UpdateAdmin(int id)
+        {
+
+            var value = db.TblAdmin.Find(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateAdmin(TblAdmin p)
+        {
+            var value = db.TblAdmin.Find(p.AdminID);
+            value.Username = p.Username;
+            value.Password = p.Password;
+           db.SaveChanges();
+            return RedirectToAction("AdminList");
         }
     }
 }
