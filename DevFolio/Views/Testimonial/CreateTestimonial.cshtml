@@ -1,4 +1,4 @@
-﻿
+﻿@model DevFolio.Models.TblTestimonial
 @{
     ViewBag.Title = "CreateTestimonial";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -8,16 +8,14 @@
 
 <form method="post">
     <label>İsim</label>
-    <input type="text" class="form-control" name="NameSurname" />
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
     <br />
-    <label>Açıklama</label>
-    <input type="text" class="form-control" name="Description" />
-    <br />
+    <label>Yorumu</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
     <label>Fotoğraf</label>
-    <input type="text" class="form-control" name="ImageUrl" />
-    <br />
-    <label>Durum</label>
-    <input type="text" class="form-control" name="Status" />
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    @*<label>Durum</label>
+    <input type="text" class="form-control" name="Status" />*@
     <br />
     <button class="btn btn-info"> Referans kısmını Kaydet</button>
 </form>

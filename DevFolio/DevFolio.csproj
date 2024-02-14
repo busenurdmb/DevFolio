@@ -140,6 +140,7 @@
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\SocialMediaController.cs" />
+    <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -376,7 +377,6 @@
     <Content Include="Views\AdminLayout\NavbarPartial.cshtml" />
     <Content Include="Views\AdminLayout\ScriptPartial.cshtml" />
     <Content Include="Views\Project\Index.cshtml" />
-    <Content Include="Views\Service\SerivceList.cshtml" />
     <Content Include="Views\Project\CreateProject.cshtml" />
     <Content Include="Views\SocialMedia\SocialMediaList.cshtml" />
     <Content Include="Views\Skill\SkillList.cshtml" />
@@ -404,6 +404,7 @@
     <Content Include="Views\Service\ServiceList.cshtml" />
     <Content Include="Views\Service\CreateService.cshtml" />
     <Content Include="Views\Service\UpdateService.cshtml" />
+    <Content Include="Views\Statistic\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

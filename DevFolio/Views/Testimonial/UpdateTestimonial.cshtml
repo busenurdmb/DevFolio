@@ -7,19 +7,19 @@
 <h2>Referans Güncellem</h2>
 
 <form method="post">
-    <input type="hidden" name="TestimonialID" value="@Model.TestimonialID" />
+    @Html.HiddenFor(x => x.TestimonialID, new { @class = "form-control" })
     <label>İsim</label>
-    <input type="text" class="form-control" name="NameSurname" value="@Model.NameSurname" />
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
     <br />
-    <label>Açıklama</label>
-    <input type="text" class="form-control" name="Description" value="@Model.Description"/>
+    <label>Yorumu</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
     <br />
     <label>Fotoğraf</label>
-    <input type="text" class="form-control" name="ImageUrl" value="@Model.ImageUrl" />
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
     <br />
-    <label>Durum</label>
-    <input type="text" class="form-control" name="Status" value="@Model.Status" />
-    <br />
-    <button class="btn btn-info"> Referans kısmını Kaydet</button>
+    @*<label>Durum</label>
+        <input type="text" class="form-control" name="Status" value="@Model.Status" />
+        <br />*@
+    <button class="btn btn-info"> Referans Güncelle</button>
 </form>
 

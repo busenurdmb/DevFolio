@@ -20,7 +20,10 @@ apartmanın içindeki daireler nesnemiz dairelerin içindeki özellikler bizim �
 sınıf nesne özellik
 class object property
 
-
+@HTMLFOR NEDEN KULLANILIR?
+C# Razor sayfalarında yaygın olarak kullanılan bir yapıdır ve ASP.NET MVC projelerinde HTML içeriği oluşturmak için kullanılır. 
+Kısacası, @Html veya @HTMLFOR, ASP.NET MVC uygulamalarında dinamik olarak HTML oluşturmanın yaygın bir yoludur.
+RouteConfig.cs, ASP.NET MVC uygulamalarında URL rotalarını tanımlamak ve yönlendirmek için kullanılan bir dosyadır. Bu dosya, MVC uygulamasının başlangıcında varsayılan olarak yüklenir.
 
 
 
