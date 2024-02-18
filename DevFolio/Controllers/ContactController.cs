@@ -19,19 +19,30 @@ namespace DevFolio.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public ActionResult SendMessage(TblContact p)
-        {
-            var value = db.TblContact.Add(p);
-            db.SaveChanges();
-
-            return RedirectToAction("MessageList");
-        }
 
         public ActionResult MessageList()
         {
             var values = db.TblContact.ToList();
             return View(values);
+        }
+
+
+        
+        public ActionResult ReadMessage(int id)
+        {
+            var values = db.TblContact.Find(id);
+            values.IsRead = true;
+            db.SaveChanges();
+            return View(values);
+        }
+
+        [HttpPost]
+        public ActionResult SendMessage(TblContact p)
+        {
+            var value = db.TblContact.Add(p);
+            db.SaveChanges();
+            ViewBag.m = "Mesajınız gönderildi.Teşekkür Ederim.";
+            return RedirectToAction("MessageList");
         }
     }
 }

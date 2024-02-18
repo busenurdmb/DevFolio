@@ -10,18 +10,26 @@
         <th> #   </th>
         <th> Proje Başlığı   </th>
         <th> Kategori   </th>
+        <th> Proje Resmi  </th>
         <th> Githup'da Aç   </th>
+        <th> Sil   </th>
+        <th> Güncelle  </th>
     </tr>
     @foreach (var item in Model)
     {
-    <tr>
-        <td>@item.ProjectID</td>
-        <td>@item.Title</td>
-        <td>@item.TblCategory.CategoryName</td>
-        <td><a href="#">GithuB'da Aç</a></td>
-    </tr>
+        <tr>
+            <td>@item.ProjectID</td>
+            <td>@item.Title</td>
+            <td>@item.TblCategory.CategoryName</td>
+            <td>@item.CoverImageUrl</td>
+            <td><a href="#">GithuB'da Aç</a></td>
+            <td><a href="/Project/DeleteProject/@item.ProjectID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Project/UpdateProject/@item.ProjectID" class="btn btn-success">Güncelle</a></td>
+        </tr>
     }
-    
-  
+
+
 </table>
+<td><a href="/Project/CreateProject" class="btn btn-info">Ekle</a></td>
+
 

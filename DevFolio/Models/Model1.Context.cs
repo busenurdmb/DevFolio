@@ -45,5 +45,10 @@ namespace DevFolio.Models
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastSkillTitle");
         }
+    
+        public virtual ObjectResult<string> GetLastCategory()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastCategory");
+        }
     }
 }

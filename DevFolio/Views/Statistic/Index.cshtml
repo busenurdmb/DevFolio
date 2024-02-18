@@ -3,13 +3,267 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-<div class="alert alert-danger">Kategori Sayısı=@ViewBag.CategoryCount</div>
-<div class="alert alert-warning">Proje Sayısı= @ViewBag.ProjeCount</div>
-<div class="alert alert-success">Yetenek Sayısı= @ViewBag.SkillCount</div>
-<div class="alert alert-dark">Ortalama Yetenek Puanı= @ViewBag.SkillavgValue</div>
-<div class="alert alert-primary">Son Eklenen Yetenek= @ViewBag.SkillLastTitle</div>
-<div class="alert alert-primary">Asp.Net Core Proje Sayısı= @ViewBag.coreCategoryProjectCount</div>
+@*<div class="alert alert-danger">Kategori Sayısı=@ViewBag.CategoryCount</div>+
+    <div class="alert alert-warning">Proje Sayısı= @ViewBag.ProjeCount</div>+
+    <div class="alert alert-success">Yetenek Sayısı= @ViewBag.SkillCount</div>+
+    <div class="alert alert-dark">Ortalama Yetenek Puanı= @ViewBag.SkillavgValue</div>
+
+    <div class="alert alert-primary">Son Eklenen Yetenek= @ViewBag.SkillLastTitle</div>+
+    <div class="alert alert-secondary">Asp.Net Core Proje Sayısı= @ViewBag.coreCategoryProjectCount</div>+
+    <div class="alert alert-dark">Son Kategori= @ViewBag.Categorylast</div>+
+    <div class="alert alert-warning">İlk Kategori= @ViewBag.CategoryFirst</div>+
+
+    <div class="alert alert-danger">Son Proje= @ViewBag.ProjectLast</div>
+    <div class="alert alert-info">İlk Proje= @ViewBag.ProjectFirst</div>*@
+<!-- start page title1 -->
+
+<div class="row">
+
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-primary border-info">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Admin</span>
+                    <h5 class="card-title mb-0 text-white">UserName</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center text-white mb-0">
+                            # @ViewBag.Admin
+                        </h2>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div> <!-- end col-->
+
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-success border-success">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Yetenekler</span>
+                    <h5 class="card-title mb-0 text-white">Ortalama Yetenek Puanı</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center text-white mb-0">
+                            # @((@ViewBag.SkillavgValue).ToString().Substring(0,5))
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
+    </div> <!-- end col-->
+
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-warning border-success">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Sosyal Medya</span>
+                    <h5 class="card-title mb-0 text-white">Sosyal Medya Sayısı</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center text-white mb-0">
+                            # @ViewBag.SocialCount
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col-->
+</div> <!-- end col-->
+
+<br />
+<div class="row">
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-primary border-primary">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Kategoriler</span>
+                    <h5 class="card-title mb-0 text-white">Kategori Sayısı</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center mb-0 text-white">
+                            # @ViewBag.CategoryCount
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col-->
+
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-success border-success">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Projeler</span>
+                    <h5 class="card-title mb-0 text-white">Proje Sayısı</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center text-white mb-0">
+                            # @ViewBag.ProjeCount
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col-->
+
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-warning border-warning">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Yetenekler</span>
+                    <h5 class="card-title mb-0 text-white">Yetenek sayısı</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center text-white mb-0">
+                            #  @ViewBag.SkillCount
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col-->
+
+
+</div>
+
+<!-- end page title1 -->
+<br />
+<!-- start page title2 -->
+<div class="row">
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-primary border-primary">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Yetenekler</span>
+                    <h5 class="card-title mb-0 text-white">Son Yetenek</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center mb-0 text-white">
+                            @ViewBag.SkillLastTitle
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col-->
+
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-success border-info">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Proje sayısı</span>
+                    <h5 class="card-title mb-0 text-white">Asp.Net Core</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center text-white mb-0">
+                            # @ViewBag.coreCategoryProjectCount
+                        </h2>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div> <!-- end col-->
+
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-warning border-success">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Kategoriler</span>
+                    <h5 class="card-title mb-0 text-white">Son Kategori</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center text-white mb-0">
+                            # @ViewBag.Categorylast
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col-->
+</div>
+
+<br />
+<div class="row">
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-primary border-info">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Projeler</span>
+                    <h5 class="card-title mb-0 text-white">İlk Proje</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center text-white mb-0">
+                            # @ViewBag.ProjectFirst
+                        </h2>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div> <!-- end col-->
+
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-success border-success">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Kategoriler</span>
+                    <h5 class="card-title mb-0 text-white">İlk Kategori</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center text-white mb-0">
+                            # @ViewBag.CategoryFirst
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div> <!-- end col-->
+    <div class="col-md-6 col-xl-4">
+        <div class="card bg-warning border-success">
+            <div class="card-body">
+                <div class="mb-4">
+                    <span class="badge badge-soft-light float-right">Projeler</span>
+                    <h5 class="card-title mb-0 text-white">Son Proje</h5>
+                </div>
+                <div class="row d-flex align-items-center mb-4">
+                    <div class="col-8">
+                        <h2 class="d-flex align-items-center text-white mb-0">
+                            # @ViewBag.ProjectLast
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col-->
+  
+</div> 
+
+<br />
 

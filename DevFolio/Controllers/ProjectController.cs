@@ -36,7 +36,7 @@ namespace DevFolio.Controllers
             p.CreatedDate = DateTime.Now;
             db.TblProject.Add(p);
             db.SaveChanges();
-            return RedirectToAction("ProjectList");
+            return RedirectToAction("Index");
         }
         public ActionResult DeleteProject(int id)
         {
@@ -71,7 +71,7 @@ namespace DevFolio.Controllers
             values.CreatedDate = p.CreatedDate;
             db.SaveChanges();
 
-            return RedirectToAction("ProjectList");
+            return RedirectToAction("Index");
         }
     }
 }

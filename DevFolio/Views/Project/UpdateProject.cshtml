@@ -4,18 +4,21 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>Yeni Proje Oluşturma Sayfası</h2>
-<input type="hidden" name="ProjectID" value="@Model.ProjectID" />
-<label> Proje Başlığı</label>
-<input type="text" class="form-control" name="Title" />
-<br />
-<label> Proje Kategorisi</label>
-@Html.DropDownListFor(m => m.TblCategory.CategoryID, (List<SelectListItem>)@ViewBag.Category, new { @class = "form-control"  )
+<form method="post">
+   
+    <h2> Proje Güncelleme Sayfası</h2>
+    @Html.HiddenFor(x => x.ProjectID)
 
+    <label> Proje Başlığı</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+   
+    <br />
+    <label> Proje Kategorisi</label>
+    @Html.DropDownListFor(m => m.TblCategory.CategoryID, (List<SelectListItem>)@ViewBag.Category, new { @class = "form-control" })
+    <br />
+    <label> Proje Resmiv</label>
+    @Html.TextBoxFor(x => x.CoverImageUrl, new { @class = "form-control" })
 
-<br />
-<label> Proje Açıklaması</label>
-<textarea class=" form-control" rows="5" value="@Model.CoverImageUrl"></textarea>
-<br />
-<button class="btn btn-info"> Projeyi Kaydet</button>
-
+    <br />
+    <button class="btn btn-info"> Projeyi Kaydet</button>
+</form>

@@ -1,0 +1,102 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@*@Html.Action("PartialHead", "Default")*@
+@Html.Partial("~/Views/Default/PartialHead.cshtml")
+
+    <body id="page-top">
+
+        <!--/ Nav Star /-->
+        @*@Html.Action("PartialNavbar", "Default")*@
+        @Html.Partial("~/Views/Default/PartialNavbar.cshtml")
+
+        <!--/ Nav End /-->
+        <!--/ Intro Skew Star /-->
+        @Html.Action("PartialFeature", "Default")
+
+        @*@Html.Partial("~/Views/Default/PartialFeature.cshtml")*@
+        <!--/ Intro Skew End /-->
+        <section id="about" class="about-mf sect-pt4 route">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="box-shadow-full">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    @Html.Action("PartialProfile", "Default")
+                                    @Html.Action("PartialSkill", "Default")
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.Action("PartialAbout", "Default")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ Section Services Star /-->
+        <section id="service" class="services-mf route">
+            <div class="container">
+                @Html.Action("PartialService", "Default")
+            </div>
+        </section>
+        <!--/ Section Services End /-->
+
+        <div class="section-counter paralax-mf bg-image" style="background-image: url(/Template/devfolio-master/img/counters-bg.jpg)">
+            <div class="overlay-mf"></div>
+            <div class="container">
+                <div class="row">
+                    @Html.Action("PartialStatistic", "Default")
+                </div>
+            </div>
+        </div>
+
+        <!--/ Section Portfolio Star /-->
+        <section id="work" class="portfolio-mf sect-pt4 route">
+            <div class="container">
+                @Html.Action("PartialPortfolio", "Default")
+            </div>
+        </section>
+        <!--/ Section Portfolio End /-->
+        <!--/ Section Testimonials Star /-->
+
+        @Html.Action("PartialTestimonial", "Default")
+        <!--/ Section Testimonials End /-->
+        <!--/ Section Contact-Footer Star /-->
+        <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
+            <div class="overlay-mf"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="contact-mf">
+                            <div id="contact" class="box-shadow-full">
+                                <div class="row">
+                                    @Html.Action("PartialSendMessage", "Default")
+                                    <div class="col-md-6">
+                                        @Html.Action("PartialAddress", "Default")
+
+                                        @Html.Action("PartialSocial", "Default")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @Html.Action("Partialfooter", "Default")
+        </section>
+        <!--/ Section Contact-footer End /-->
+
+        @Html.Action("PartialScript", "Default")
+
+    </body>
+
+
+
+
+</html>
+

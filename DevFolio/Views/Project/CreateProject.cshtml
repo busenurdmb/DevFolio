@@ -5,17 +5,16 @@
 }
 
 <h2>Yeni Proje Oluşturma Sayfası</h2>
+
 <form method="post">
     <label> Proje Başlığı</label>
-    <input type="text" class="form-control" name="Title" />
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
     <br />
     <label> Proje Kategorisi</label>
     @Html.DropDownListFor(m => m.TblCategory.CategoryID, (List<SelectListItem>)@ViewBag.Category, new { @class = "form-control" })
-
-
-    <br />
+     <br />
     <label> Proje Resmi</label>
-    <input type="text" class="form-control" name="CoverImageUrl" />
+    @Html.TextBoxFor(x => x.CoverImageUrl, new { @class = "form-control" })
     <br />
     <button class="btn btn-info"> Projeyi Kaydet</button>
 </form>
