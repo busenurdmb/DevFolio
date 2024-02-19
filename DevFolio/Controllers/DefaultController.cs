@@ -73,18 +73,40 @@ namespace DevFolio.Controllers
         {
             return PartialView();
         }
-        [HttpPost]
-        public PartialViewResult PartialSendMessage(TblContact p)
-        {
-            var value = db.TblContact.Add(p);
-            value.SendMessageDate = DateTime.Now;
-            value.IsRead = false;
-            db.SaveChanges();
-            ViewBag.m = "Mesajınız gönderildi.Teşekkür Ederim.";
-            ViewBag.c = "show";
-            return PartialView();
+        //[HttpPost]
+        //public PartialViewResult PartialSendMessage(TblContact p)
+        //{
+            
+        //        var value = db.TblContact.Add(p);
+        //        value.SendMessageDate = DateTime.Now;
+        //        value.IsRead = false;
 
+        //        db.SaveChanges();
+        //        ViewBag.m = "Mesajınız gönderildi.Teşekkür Ederim.";
+        //        ViewBag.c = "show";
+        //        return PartialView();
+            
+          
+        //}
+
+        [HttpPost]
+        public JsonResult Add(TblContact p)
+        {
+            if (ModelState.IsValid)
+            {
+                p.SendMessageDate = DateTime.Now;
+                p.IsRead = false;
+                var value = db.TblContact.Add(p);
+                db.SaveChanges();
+                return Json("OK"); // Başarılı bir şekilde eklendiğinde "OK" yanıtı döndürülür
+            }
+            // Eğer model geçersizse, hata mesajlarıyla birlikte hata yanıtı döndürülür
+            return Json("Model validation failed.");
         }
+
+
+
+
         public PartialViewResult PartialAddress()
         {
             var values = db.TblAddress.ToList();

@@ -1,4 +1,4 @@
-﻿@model DevFolio.Models.TblContact
+﻿﻿@model DevFolio.Models.TblContact
 
 <div class="col-md-6">
     <div class="title-box-2">
@@ -8,10 +8,10 @@
     </div>
     <div>
 
-        <form method="post" role="form">
+        <form method="post" action="Add" role="form" class="contactForm">
             <div id="sendmessage" class="@ViewBag.c">Mesajınız gönderildi.Teşekkür Ederim.</div>
             @*<div>@ViewBag.m</div>*@
-        <div id="errormessage" ></div>
+            <div id="errormessage"></div>
             <div class="row">
                 <div class="col-md-12 mb-3">
                     <div class="form-group">
@@ -39,8 +39,8 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <button type="submit" class="button button-a button-big button-rouded" >Mesajı Gönder</button>
-                    @*Swal.fire("SweetAlert2 is working!");*@
+                    <button type="submit" class="button button-a button-big button-rouded">Mesajı Gönder</button>
+                  
                 </div>
             </div>
         </form>
