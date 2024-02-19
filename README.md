@@ -2,9 +2,9 @@
 Bu proje My Yazılım Akademi Bünyesinde Murat Yücedağ Eğitmenliği tarafından  Asp.Net MVC kullanarak yapılan ilk projedir.
 
 # Projeye Genel Bakış
-Bu proje Portfolio ve Admin teması olmak üzere 2 temadan oluşturularak yapılan bir Cv sitesidir.
-Admin temasında cv sahibi  portfolioda gösterilecek verilerin CRUD işlemlerini gerçekleştirir.
-Portfolio kısmında Cv sahibinin admin temasında crud işlemleri ile girdiği verileri içerir.
+
+🖱️ Admin Paneli: CRUD işlemlerine sahip olan admin paneli, kullanıcıların kişisel bilgilerini, projelerini, referanslarını ve hizmetlerini kolayca girebilecekleri ve güncelleyebilecekleri bir ortam sağlar.
+👤 Kullanıcı Arayüzü: Şık ve duyarlı bir tasarım, ziyaretçilere CV'nizi etkileyici bir şekilde sunuyor.
 
 
 # Kullanılan Teknolojiler ve Uygulamalar
