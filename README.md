@@ -14,7 +14,7 @@ Bu proje My Yazılım Akademi Bünyesinde Murat Yücedağ Eğitmenliği tarafın
 - Microsoft SQL Server (MSSQL) Veritabanı->Veritabanı yönetimi ve depolama için kullanıldı. ✅
 - HTML-CSS-Bootstrap (Arayüz tasarımı için) - ✅
 - JS - ✅
-- Ajax -(Mesaj göderirken sayfayı yenilemek için kullanıldı) ✅
+- Ajax -(Mesaj gönderimi sırasında sayfa yenileme olmadan veri gönderme ve alımı) ✅
 - LINQ - ✅
 
   #Veriabanı
