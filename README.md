@@ -16,13 +16,13 @@ Portfolio kısmında Cv sahibinin admin temasında crud işlemleri ile girdiği 
 - LINQ - ✅
 
   #Veriabanı
-   ![(https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Veritaban%C4%B1.png)
+   ![Veriabanı](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Veritaban%C4%B1.png)
   #Portfolio
-   ![(https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Portfolio.jpeg)
+   ![Portfolio](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Portfolio.jpeg)
    #Dashboard
-   ![(https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Dashboard.jpeg)
+   ![](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Dashboard.jpeg)
   #İstatislikler
-   ![(https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/%C4%B0statislik.jpeg)
+   ![](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/%C4%B0statislik.jpeg)
    #Kategori Listesi
    ![](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Kategoriler.jpeg)
   #Proje Listesi
