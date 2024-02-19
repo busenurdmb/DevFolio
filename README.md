@@ -24,6 +24,6 @@ Portfolio kısmında Cv sahibinin admin temasında crud işlemleri ile girdiği 
   #İstatislikler
    ![(https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/%C4%B0statislik.jpeg)
    #Kategori Listesi
-   ![(https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Kategoriler.jpeg)
+   ![](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Kategoriler.jpeg)
   #Proje Listesi
    ![Proje](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/ReferansListesi.jpeg)
