@@ -13,7 +13,8 @@ Bu proje My Yazılım Akademi Bünyesinde Murat Yücedağ Eğitmenliği tarafın
 -  Db First -> Veritabanı şeması, mevcut bir veritabanından çıkarıldı ✅
 - Microsoft SQL Server (MSSQL) Veritabanı->Veritabanı yönetimi ve depolama için kullanıldı. ✅
 - HTML-CSS-Bootstrap (Arayüz tasarımı için) - ✅
-- js ✅
+- JS - ✅
+- Ajax -(Mesaj göderirken sayfayı yenilemek için kullanıldı) ✅
 - LINQ - ✅
 
   #Veriabanı
