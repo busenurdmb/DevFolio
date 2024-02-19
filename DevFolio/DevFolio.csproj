@@ -323,6 +323,12 @@
     <Content Include="Template\devfolio-master\lib\typed\typed.js" />
     <Content Include="Template\devfolio-master\lib\typed\typed.min.js" />
     <Content Include="Template\devfolio-master\Readme.txt" />
+    <Content Include="Template\img\İstatislik.jpeg" />
+    <Content Include="Template\img\Portfolio.jpeg" />
+    <Content Include="Template\img\Dashboard.jpeg" />
+    <Content Include="Template\img\Kategoriler.jpeg" />
+    <Content Include="Template\img\ReferansListesi.jpeg" />
+    <Content Include="Template\img\Veritabanı.png" />
     <Content Include="Template\sidebar-01\css\bootstrap.min.css" />
     <Content Include="Template\sidebar-01\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="Template\sidebar-01\css\bootstrap\mixins\_screen-reader.css" />
