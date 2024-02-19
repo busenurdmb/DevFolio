@@ -20,10 +20,10 @@ Portfolio kısmında Cv sahibinin admin temasında crud işlemleri ile girdiği 
   #Portfolio
    ![Portfolio](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Portfolio.jpeg)
    #Dashboard
-   ![](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Dashboard.jpeg)
+   ![Dashboard](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Dashboard.jpeg)
   #İstatislikler
-   ![](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/%C4%B0statislik.jpeg)
+   ![İstatislikler](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/%C4%B0statislik.jpeg)
    #Kategori Listesi
-   ![](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Kategoriler.jpeg)
+   ![Kategori Listesi](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/Kategoriler.jpeg)
   #Proje Listesi
    ![Proje](https://github.com/busenurdmb/DevFolio/blob/master/DevFolio/Template/img/ReferansListesi.jpeg)
