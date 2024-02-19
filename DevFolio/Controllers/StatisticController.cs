@@ -18,7 +18,7 @@ namespace DevFolio.Controllers
             ViewBag.SkillavgValue = db.TblSkill.Average(x => x.SkillValue);
             ViewBag.SkillLastTitle = db.GetLastSkillTitle().FirstOrDefault();
             ViewBag.coreCategoryProjectCount = db.TblProject.Where(x => x.ProjectCategory == 1).Count();
-            ViewBag.Categorylast = db.GetLastCategory().FirstOrDefault();
+            ViewBag.Categorylast = db.GetLastCategoryName().FirstOrDefault();
             ViewBag.CategoryFirst= db.TblCategory.OrderBy(x => x.CategoryID).FirstOrDefault().CategoryName;
             ViewBag.ProjectLast = db.TblProject.OrderByDescending(x => x.ProjectID).FirstOrDefault().Title;
             ViewBag.ProjectFirst = db.TblProject.OrderBy(x => x.ProjectID).FirstOrDefault().Title;

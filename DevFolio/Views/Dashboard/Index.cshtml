@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container">
+       
+
+            <!-- start page title -->
+            @Html.Action("statictic", "Dashboard")
+            <!-- end page title -->
+            <br />
+            <div class="row">
+
+                @Html.Partial("~/Views/Dashboard/messagecountchart.cshtml")*
+
+
+            </div>
+            <br />
+            <!-- end row-->
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Yetenekler-Değerleri</h4>
+
+
+                            <canvas id="barChart"></canvas>
+
+                        </div>  <!-- end card-body-->
+                    </div>  <!-- end card-->
+                </div>
+                <!-- end col -->
+
+
+
+          
+            <!-- end row-->
+        </div> <!-- container-fluid -->
+    </div>
+</div>
+
+
+<script src="~/Template/sidebar-01/vertical/assets/js/jquery.min.js"></script>
+<script src="~/Template/sidebar-01/vertical/assets/js/bootstrap.bundle.min.js"></script>
+<script src="~/Template/sidebar-01/vertical/assets/js/metismenu.min.js"></script>
+<script src="~/Template/sidebar-01/vertical/assets/js/waves.js"></script>
+<script src="~/Template/sidebar-01/vertical/assets/js/simplebar.min.js"></script>
+<script src="~/Template/sidebar-01/plugins/chart-js/chart.min.js"></script>
+
+@Html.Action("chartjs", "Dashboard")
+
+<script src="~/Template/sidebar-01/vertical/assets/js/theme.js"></script>

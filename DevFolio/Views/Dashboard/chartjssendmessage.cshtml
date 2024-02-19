@@ -1,0 +1,57 @@
+﻿@model List<DevFolio.Models.TblSkill>
+@{
+    List<string> skiilname = new List<string>();
+    List<int> skillvalue = new List<int>();
+    foreach (var item in Model)
+    {
+        skiilname.Add(item.SkillTitle);
+        skillvalue.Add((int)item.SkillValue);
+    }
+}
+if ($("#barChart").length) {
+                var currentChartCanvas = $("#barChart").get(0).getContext("2d");
+                var currentChart = new Chart(currentChartCanvas, {
+                    type: 'bar',
+                    data: {
+
+ labels: ["@skiilname[0]", "@skiilname[1]", "@skiilname[2]","@skiilname[3]", "@skiilname[4]", "@skiilname[5]", "@skiilname[6]", "@skiilname[7]"
+                    ],
+                        datasets: [{
+                        label: 'SkillValue',
+                        data: [@skillvalue[0], @skillvalue[1], @skillvalue[2], @skillvalue[3], @skillvalue[4], @skillvalue[5], @skillvalue[6], @skillvalue[7]],
+                        backgroundColor: '#2ac14e'
+                        }
+                        ]
+                        },
+                        options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+
+                        scales: {
+                        yAxes: [{
+                        display: true,
+                        gridLines: {
+                        drawBorder: false,
+                        },
+                        ticks: {
+                        fontColor: "#686868"
+                        }
+                        }],
+                        xAxes: [{
+                        ticks: {
+                        fontColor: "#686868"
+                        },
+                        gridLines: {
+                        display: false,
+                        drawBorder: false
+                        }
+                        }]
+                        },
+                        elements: {
+                        point: {
+                        radius: 0
+                        }
+                        }
+                        }
+                        });
+                        }

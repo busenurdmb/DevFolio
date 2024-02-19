@@ -37,7 +37,7 @@ namespace DevFolio.Controllers
         }
         public PartialViewResult PartialSkill()
         {
-            var values = db.TblSkill.ToList();
+            var values = db.TblSkill.Take(4).ToList();
             return PartialView(values);
         }
         public PartialViewResult PartialAbout()
@@ -103,6 +103,6 @@ namespace DevFolio.Controllers
         {
             return PartialView();
         }
-
+        
     }
 }

@@ -17,17 +17,20 @@
     </tr>
     @foreach (var item in Model)
     {
-        <tr>
-            <td>@item.TestimonialID</td>
-            <td>@item.NameSurname</td>
-            <td>@item.Description</td>
-            <td>@item.ImageUrl</td>
-            <td>@item.Status</td>
-            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-success">Güncelle</a></td>
-        </tr>
+<tr>
+    <td>@item.TestimonialID</td>
+    <td>@item.NameSurname</td>
+    <td>@item.Description</td>
+    <td>
+       <img style="width: 50%; height: 50%;" src="@item.ImageUrl" alt="@item.ImageUrl" class="img-thumbnail">
+   </td>
+    
+    <td>@item.Status</td>
+    <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-danger">Sil</a></td>
+    <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-success">Güncelle</a></td>
+</tr>
 
     }
 </table>
-<td><a href="/Testimonial/CreateTestimonial" class="btn btn-info">Ekle</a></td>
+<td><a href="/Testimonial/CreateTestimonial" class="btn btn-info">Hizmet Ekle</a></td>
 

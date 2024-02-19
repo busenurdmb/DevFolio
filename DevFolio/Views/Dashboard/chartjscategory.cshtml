@@ -1,0 +1,50 @@
+﻿@model List<DevFolio.Models.Getprojectcountcategory_Result>
+@{
+    List<string> ProjectCategory = new List<string>();
+    List<int> count = new List<int>();
+
+    foreach (var item in Model)
+    {
+        ProjectCategory.Add(item.CategoryName);
+        count.Add((int)item.Count);
+    }
+}
+
+   if ($("#pieChart").length) {
+                var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
+                var pieChart = new Chart(pieChartCanvas, {
+                    type: 'pie',
+                    data: {
+                        datasets: [{
+                            data: [@count[0], @count[1], @count[2], @count[3]],
+                            backgroundColor: [
+                            '#3F51B5',
+                            '#f8ac5a',
+                            '#00c2b2',
+                            '#f15050'
+                            ],
+                            borderColor: [
+                            '#3F51B5',
+                            '#f8ac5a',
+                            '#00c2b2',
+                            '#f15050'
+                            ],
+                            }],
+
+                            // These labels appear in the legend and in the tooltips when hovering different arcs
+                            labels: [
+                            '@ProjectCategory[0]',
+                            '@ProjectCategory[1]',
+                            '@ProjectCategory[2]',
+                            '@ProjectCategory[3]'
+                            ]
+                            },
+                            options: {
+                            responsive: true,
+                            animation: {
+                            animateScale: true,
+                            animateRotate: true
+                            }
+                            }
+                            });
+                            }

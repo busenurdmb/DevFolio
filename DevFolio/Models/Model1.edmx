@@ -136,8 +136,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="GetLastCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetLastCategoryName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="GetLastSkillTitle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Getprojectcountcategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetSendMessageCountLastTop7" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DbDevFolioModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
@@ -314,7 +316,24 @@
           </AssociationSet>
           <FunctionImport Name="GetLastSkillTitle" ReturnType="Collection(String)" />
           <FunctionImport Name="GetLastCategory" ReturnType="Collection(String)" />
+          <FunctionImport Name="GetSendMessageCountLastTop7" ReturnType="Collection(DbDevFolioModel.GetSendMessageCountLastTop7_Result)" />
+          <FunctionImport Name="Getprojectcategoryıd" ReturnType="Collection(DbDevFolioModel.Getprojectcategoryıd_Result)" />
+          <FunctionImport Name="Getprojectcountcategory" ReturnType="Collection(DbDevFolioModel.Getprojectcountcategory_Result)" />
+          <FunctionImport Name="GetLastCategory1" ReturnType="Collection(String)" />
+          <FunctionImport Name="GetLastCategoryName" ReturnType="Collection(String)" />
         </EntityContainer>
+        <ComplexType Name="GetSendMessageCountLastTop7_Result">
+          <Property Type="DateTime" Name="SendMessageDate" Nullable="true" />
+          <Property Type="Int32" Name="Count" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Getprojectcategoryıd_Result">
+          <Property Type="Int32" Name="ProjectCategory" Nullable="true" />
+          <Property Type="Int32" Name="Count" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Getprojectcountcategory_Result">
+          <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Count" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -454,7 +473,23 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="GetLastSkillTitle" FunctionName="DbDevFolioModel.Store.GetLastSkillTitle" />
-          <FunctionImportMapping FunctionImportName="GetLastCategory" FunctionName="DbDevFolioModel.Store.GetLastCategory" />
+          <FunctionImportMapping FunctionImportName="GetSendMessageCountLastTop7" FunctionName="DbDevFolioModel.Store.GetSendMessageCountLastTop7">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DbDevFolioModel.GetSendMessageCountLastTop7_Result">
+                <ScalarProperty Name="SendMessageDate" ColumnName="SendMessageDate" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Getprojectcountcategory" FunctionName="DbDevFolioModel.Store.Getprojectcountcategory">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DbDevFolioModel.Getprojectcountcategory_Result">
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetLastCategoryName" FunctionName="DbDevFolioModel.Store.GetLastCategoryName" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -1,0 +1,68 @@
+﻿@model List<DevFolio.Models.GetSendMessageCountLastTop7_Result>
+@{
+    List<string> sendmessagedate = new List<string>();
+    List<int> messagecount = new List<int>();
+
+    foreach (var item in Model)
+    {
+        sendmessagedate.Add(((DateTime)item.SendMessageDate).ToString("dd.MM.yyyy"));
+        messagecount.Add((int)item.Count);
+    }
+}
+
+
+    if ($('#lineChart').length) {
+                var lineChartCanvas = $("#lineChart").get(0).getContext("2d");
+                var data = {
+labels: ["@sendmessagedate[0]", "@sendmessagedate[1]", "@sendmessagedate[2]","@sendmessagedate[3]", "@sendmessagedate[4]", "@sendmessagedate[5]", "@sendmessagedate[6]"],
+                    datasets: [
+                    {
+                    label: 'SkiilValue',
+                    data: [@messagecount[0], @messagecount[1], @messagecount[2], @messagecount[3], @messagecount[4], @messagecount[5], @messagecount[6]],
+                    borderColor: [
+                    '#1d84c6'
+                    ],
+                    borderWidth: 5,
+                    fill: false,
+                    pointBackgroundColor: "#ffffff",
+                    pointBorderColor: "#1d84c6"
+                    },
+
+                    ]
+                    };
+                    var options = {
+                    scales: {
+                    yAxes: [{
+                    gridLines: {
+                    drawBorder: false,
+                    borderDash: [3, 3]
+                    },
+                    ticks: {
+                    min: 0
+                    },
+                    }],
+                    xAxes: [{
+                    gridLines: {
+                    display: false,
+                    drawBorder: false,
+                    color: "#ffffff"
+                    }
+                    }]
+                    },
+                    elements: {
+                    line: {
+                    tension: 0.2
+                    },
+                    point: {
+                    radius: 4
+                    }
+                    },
+                    stepsize: 1
+                    };
+                    var lineChart = new Chart(lineChartCanvas, {
+                    type: 'line',
+                    data: data,
+                    options: options
+                    });
+                    }
+

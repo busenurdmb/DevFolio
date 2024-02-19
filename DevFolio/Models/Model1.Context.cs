@@ -50,5 +50,30 @@ namespace DevFolio.Models
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastCategory");
         }
+    
+        public virtual ObjectResult<GetSendMessageCountLastTop7_Result> GetSendMessageCountLastTop7()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetSendMessageCountLastTop7_Result>("GetSendMessageCountLastTop7");
+        }
+    
+        public virtual ObjectResult<Getprojectcategoryıd_Result> Getprojectcategoryıd()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Getprojectcategoryıd_Result>("Getprojectcategoryıd");
+        }
+    
+        public virtual ObjectResult<Getprojectcountcategory_Result> Getprojectcountcategory()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Getprojectcountcategory_Result>("Getprojectcountcategory");
+        }
+    
+        public virtual ObjectResult<string> GetLastCategory1()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastCategory1");
+        }
+    
+        public virtual ObjectResult<string> GetLastCategoryName()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastCategoryName");
+        }
     }
 }

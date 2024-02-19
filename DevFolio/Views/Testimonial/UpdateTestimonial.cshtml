@@ -17,6 +17,14 @@
     <label>Fotoğraf</label>
     @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
     <br />
+    <label>Mevcut Görsel</label>
+    <br />
+    <img style="width: 30%; height: 30%;" src="@Model.ImageUrl" alt="@Model.ImageUrl" class="img-thumbnail">
+    <br />
+
+    <label for="formFileMultiple" class="form-label">Fotoğraf</label>
+    <input class="form-control mb-3" type="file" name="file" id="formFileMultiple">
+    <br />
     @*<label>Durum</label>
         <input type="text" class="form-control" name="Status" value="@Model.Status" />
         <br />*@
