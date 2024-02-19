@@ -12,7 +12,8 @@ Bu proje My Yazılım Akademi Bünyesinde Murat Yücedağ Eğitmenliği tarafın
 - Entity Framework (ORM) 6.0 - >Veritabanı etkileşimi ve ORM (Nesne İlişkilendirme Haritası) için kullanıldı.✅
 -  Db First -> Veritabanı şeması, mevcut bir veritabanından çıkarıldı ✅
 - Microsoft SQL Server (MSSQL) Veritabanı->Veritabanı yönetimi ve depolama için kullanıldı. ✅
-- HTML ve CSS (Arayüz tasarımı için) - ✅
+- HTML-CSS-Bootstrap (Arayüz tasarımı için) - ✅
+- js ✅
 - LINQ - ✅
 
   #Veriabanı
